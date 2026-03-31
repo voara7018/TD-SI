@@ -1,15 +1,9 @@
-<?php
-require_once __DIR__ . '/../vendor/autoload.php';
-require_once __DIR__ . '/../app/config/bootstrap.php';
-
-Flight::start();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Document</title>
 </head>
@@ -37,19 +31,19 @@ Flight::start();
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Nom</th>
+                            <th>Désignation</th>
                             <th>Prix</th>
-                            <th>Description</th>
+                            <th>Quantité stock</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php if (isset($produits) && is_array($produits)): ?>
                             <?php foreach ($produits as $produit): ?>
                                 <tr>
-                                    <td><?= htmlspecialchars($produit['id']) ?></td>
-                                    <td><?= htmlspecialchars($produit['nom']) ?></td>
+                                    <td><?= htmlspecialchars($produit['idproduit']) ?></td>
+                                    <td><?= htmlspecialchars($produit['designation']) ?></td>
                                     <td><?= htmlspecialchars($produit['prix']) ?> €</td>
-                                    <td><?= htmlspecialchars($produit['description']) ?></td>
+                                    <td><?= htmlspecialchars($produit['quantite_stock']) ?></td>
                                 </tr>
                             <?php endforeach; ?>
                         <?php else: ?>
