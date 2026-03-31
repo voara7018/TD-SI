@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS achat (
   idachat INT AUTO_INCREMENT PRIMARY KEY,
   dateAchat DATETIME,
   idcaisse INT,
-  FOREIGN KEY (idcaisse) REFERENCES Caisse(idcaisse)
+  FOREIGN KEY (idcaisse) REFERENCES caisse(idcaisse)
 
 );
 
@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS detail_achat (
   prix_unitaire DECIMAL(10, 2),
 
   FOREIGN KEY (idachat) REFERENCES achat(idachat),
-  FOREIGN KEY (idproduit) REFERENCES produits(idproduit)
+  FOREIGN KEY (idproduit) REFERENCES produit(idproduit)
 
 );
 
