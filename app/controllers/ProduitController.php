@@ -9,6 +9,6 @@ class ProduitController
     
         $produits = $produitRepo->afficherListeProduits();
 
-        Flight::render('produits', ['produits' => $produits]);
+        Flight::render('index', ['produits' => $produits]);
     }
 }
