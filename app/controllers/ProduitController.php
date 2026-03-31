@@ -6,7 +6,8 @@ class ProduitController
     {
         $db = Flight::db();
         $produitRepo = new ProduitRepositories($db);
-        $produits = $produitRepo->listeProduits();
+    
+        $produits = $produitRepo->afficherListeProduits();
 
         Flight::render('produits', ['produits' => $produits]);
     }

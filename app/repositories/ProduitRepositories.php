@@ -1,6 +1,6 @@
 <?php
 
-class ProduitController
+class ProduitRepositories
 {
     private $pdo;
 
