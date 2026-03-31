@@ -1,0 +1,53 @@
+@import "color";
+
+.page {
+    display: flex;
+    background-color: $rouge;
+    flex-direction: column;
+    height : 23cm;
+    color:rgb(255, 255, 255)
+
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 25% 75%;
+
+    section {
+        background-color: $bleu;
+        color:rgb(0, 0, 0);
+        padding: 0.6rem ;
+        grid-column: 2 / 3;
+    }
+
+    aside {
+        background-color: $jaune;
+        padding: 0.6rem ;
+        grid-column: 1 / 2;
+    }
+    
+}
+
+
+header {
+    background-color: $vert;
+    height: 4cm;
+    padding : 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+footer {
+    background-color: $petit;
+    width: 100%;
+    height: 3cm;
+    display: flex;
+    justify-content: center;
+}
+body {
+    padding: 2%;
+    background-color: rgb(240, 191, 252);
+}
