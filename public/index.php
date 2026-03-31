@@ -3,11 +3,6 @@ require_once __DIR__ . '/../vendor/autoload.php';
 require_once __DIR__ . '/../app/config/bootstrap.php';
 
 Flight::start();
-<<<<<<< HEAD
-
-
-?>
-=======
 ?>
 
 <!DOCTYPE html>
@@ -45,4 +40,3 @@ Flight::start();
         </footer>
 </body>
 </html>
->>>>>>> 687bc473203d4cc5a6f7a91a255bbb82f9e94da5
