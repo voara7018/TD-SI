@@ -1,12 +1,17 @@
 <?php
 require_once __DIR__ . '/config.php';
 
+// Démarrer la session une fois pour toute l'application
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
 Flight::register('db', 'PDO', array(
     "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=" . DB_CHARSET,
     DB_USER,
     DB_PASS,
     array(
-        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
     )
 ));
