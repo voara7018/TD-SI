@@ -4,6 +4,7 @@ class CaisseRepositories
 {
     private $pdo;
 
+<<<<<<< HEAD
     public function __construct(PDO $pdo)
     {
         $this->pdo = $pdo;
@@ -25,3 +26,18 @@ class CaisseRepositories
         return $st->fetch(PDO::FETCH_ASSOC);
     }
 }
+=======
+    public function __construct(PDO $pdo) {
+        $this->pdo = $pdo;
+    }
+
+    public function afficherListeCaisse()
+    {
+        $st = $this->pdo->query("SELECT * FROM caisse");
+        $st->execute();
+        return $st->fetchAll(PDO::FETCH_ASSOC);
+  
+    }
+    
+}
+>>>>>>> b631bd2bba07892243ad05c18a5d713490f155a0

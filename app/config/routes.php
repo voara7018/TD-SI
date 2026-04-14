@@ -4,6 +4,7 @@ require_once __DIR__ . '/../repositories/ProduitRepositories.php';
 require_once __DIR__ . '/../repositories/CaisseRepositories.php';
 require_once __DIR__ . '/../repositories/AchatRepositories.php';
 require_once __DIR__ . '/../controllers/ProduitController.php';
+<<<<<<< HEAD
 require_once __DIR__ . '/../controllers/AuthController.php';
 require_once __DIR__ . '/../controllers/CaisseController.php';
 require_once __DIR__ . '/../controllers/AchatController.php';
@@ -26,3 +27,10 @@ Flight::route('POST /cloturer-achat',   ['AchatController', 'cloturerAchat']);
 
 // Statistiques
 Flight::route('GET /statistiques', ['StatistiquesController', 'afficherStatistiques']);
+=======
+require_once __DIR__ . '/../controllers/CaisseController.php';
+require_once __DIR__ . '/../repositories/CaisseRepositories.php';
+
+Flight::route('GET /', ['ProduitController', 'afficherListeProduits']);
+Flight::route('GET /caisses', ['CaisseController', 'afficherListeCaisse']);
+>>>>>>> b631bd2bba07892243ad05c18a5d713490f155a0

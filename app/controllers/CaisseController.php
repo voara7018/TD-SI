@@ -2,6 +2,7 @@
 
 class CaisseController
 {
+<<<<<<< HEAD
     // GET /
     // Affiche la liste des caisses pour en choisir une
     public static function afficherChoixCaisse()
@@ -47,3 +48,15 @@ class CaisseController
         Flight::redirect('/achat');
     }
 }
+=======
+    public static function afficherListeCaisse()
+    {
+        $db = Flight::db();
+        $caisseRepo = new CaisseRepositories($db);
+    
+        $caisses = $caisseRepo->afficherListeCaisse();
+
+        Flight::render('numerocaisse', ['caisses' => $caisses]);
+    }
+}
+>>>>>>> b631bd2bba07892243ad05c18a5d713490f155a0
